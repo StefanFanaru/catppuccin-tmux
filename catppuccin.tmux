@@ -118,7 +118,8 @@ main() {
 
   # status module
   local status_left_separator status_right_separator status_connect_separator \
-    status_fill status_modules_left status_modules_right
+    status_fill status_modules_left status_modules_right \
+    status_left_initial_separator status_right_initial_separator
   status_left_separator=$(get_tmux_option "@catppuccin_status_left_separator" "")
   status_right_separator=$(get_tmux_option "@catppuccin_status_right_separator" "█")
   status_connect_separator=$(get_tmux_option "@catppuccin_status_connect_separator" "yes")

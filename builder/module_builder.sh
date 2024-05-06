@@ -5,6 +5,7 @@ build_status_module() {
   local icon="$2"
   local color="$3"
   local text="$4"
+  local name="$5"
 
   if [ "$status_fill" = "icon" ]; then
     local show_icon="#[fg=$thm_bg,bg=$color,nobold,nounderscore,noitalics]$icon "
@@ -38,6 +39,14 @@ build_status_module() {
 
   if [ $((index)) -eq 0 ]; then
     local show_left_separator="#[fg=$color,bg=default,nobold,nounderscore,noitalics]$status_left_separator"
+  fi
+
+  if [ "$name" = "session" ]; then
+    local show_left_separator="#[fg=$color,bg=default,nobold,nounderscore,noitalics]█"
+  fi
+
+  if [ "$name" = "time" ]; then
+    local show_right_separator="#[fg=$thm_gray,bg=default,nobold,nounderscore,noitalics]█"
   fi
 
   echo "$show_left_separator$show_icon$show_text$show_right_separator"

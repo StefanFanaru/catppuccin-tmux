@@ -6,7 +6,7 @@ show_date_time() {
   color="$(get_tmux_option "@catppuccin_date_time_color" "$thm_blue")"
   text="$(get_tmux_option "@catppuccin_date_time_text" "%Y-%m-%d %H:%M")"
 
-  module=$(build_status_module "$index" "$icon" "$color" "$text")
+  module=$(build_status_module "$index" "$icon" "$color" "$text" "time")
 
   echo "$module"
 }
