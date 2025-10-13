@@ -129,9 +129,9 @@ main() {
   loaded_modules_left=$(load_modules "$status_modules_left" "$modules_custom_path" "$modules_status_path")
   set status-left "$loaded_modules_left"
 
-  status_modules_right=$(get_tmux_option "@catppuccin_status_modules_right" "application session")
-  loaded_modules_right=$(load_modules "$status_modules_right" "$modules_custom_path" "$modules_status_path")
-  set status-right "$loaded_modules_right"
+  # status_modules_right=$(get_tmux_option "@catppuccin_status_modules_right" "application session")
+  # loaded_modules_right=$(load_modules "$status_modules_right" "$modules_custom_path" "$modules_status_path")
+  # set status-right "$loaded_modules_right"
 
   # modes
   setw clock-mode-colour "${thm_blue}"
