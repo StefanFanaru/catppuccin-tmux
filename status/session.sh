@@ -6,7 +6,7 @@ show_session() {
   color=$(get_tmux_option "@catppuccin_session_color" "#{?client_prefix,$thm_red,$thm_green}")
   text=$(get_tmux_option "@catppuccin_session_text" "#S")
 
-  module=$(build_status_module "$index" "$icon" "$color" "$text" "session")
+  module=$(build_status_module "$icon" "$color" "$text" "session")
 
   echo "$module"
 }
